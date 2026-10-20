@@ -1,0 +1,6 @@
+httpx2 2.13.0
+License: OSI Approved :: BSD License
+Project: 
+========================================================================
+
+Upstream bundled no license text file and the license family could not be determined automatically. Refer to the project's PyPI page for the authoritative license text.

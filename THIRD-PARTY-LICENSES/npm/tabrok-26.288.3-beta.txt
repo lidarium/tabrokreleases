@@ -1,0 +1,6 @@
+tabrok 26.288.3-beta
+License: UNKNOWN
+Project: 
+========================================================================
+
+Upstream bundled no license text file in this distribution. Refer to the project's repository for the authoritative license text.
