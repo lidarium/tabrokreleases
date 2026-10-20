@@ -1,0 +1,6 @@
+certifi 2026.7.22
+License: MPL-2.0
+Project: 
+========================================================================
+
+Upstream bundled no license text file and the license family could not be determined automatically. Refer to the project's PyPI page for the authoritative license text.

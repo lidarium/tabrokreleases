@@ -1,0 +1,458 @@
+TABROK PROPRIETARY LICENSE
+
+Version 1.3
+SPDX-License-Identifier: LicenseRef-Teralidarium-TPL-1.0
+
+Copyright (c) 2025–2026 M/s TERALIDARIUM WORKS (an Udyam-registered sole proprietorship firm existing under the laws of India). All Rights Reserved.
+Commercial & Legal Inquiries: legal@lidarium.com
+Website: https://lidarium.com
+
+---
+
+## PREAMBLE & NOTICE
+
+This software, its associated application bundle, installer packages, backend binaries, agent
+engines, automation heuristics, scoring and pacing algorithms, user interfaces, security
+architecture, and documentation (collectively, the "Software") are proprietary works protected
+under the Indian Copyright Act, 1957, the Berne Convention for the Protection of Literary and
+Artistic Works, the WIPO Copyright Treaty, and applicable international intellectual property
+and contract laws.
+
+By downloading, installing, copying, or otherwise using the Software — including by clicking
+"I Agree" (or any functionally equivalent affirmative confirmation) in the Software's first-run
+license dialog — You agree to be bound by the terms and conditions of this License. If You do
+not agree, do not install, download, or use the Software.
+
+No rights are granted under this License other than the limited, conditional rights expressly
+set forth below.
+
+---
+
+## 1. DEFINITIONS
+
+1.1. **"Licensor"**, **"We"**, **"Us"**, or **"Our"** means **M/s TERALIDARIUM WORKS** (an
+Udyam-registered sole proprietorship firm existing under the laws of India, together with its
+sole proprietor and any successor corporate entity, LLP, or assignee, operating the "Tabrok"
+and "Lidarium" projects at https://lidarium.com and contactable via `legal@lidarium.com`),
+which is the sole and unified owner of the copyright and intellectual property rights in the
+Software. The natural-person identity of the sole proprietor, Udyam registration certificate,
+and any assignment or succession deeds shall be maintained under confidentiality by Licensor
+and disclosed to any court, tribunal, or arbitral authority under seal upon request, or to any
+party upon execution of a reasonable non-disclosure agreement, for the purposes of establishing
+standing, chain of title, or enforcement.
+
+1.2. **"You"** or **"Licensee"** means any individual or organizational end user who installs,
+downloads, or uses the Software, **however the copy was obtained** — whether directly from
+Licensor, from an authorized redistribution, or from any other source. This License binds every
+user of the Software; no direct relationship, purchase, or download from Licensor is required for
+this License to apply, and no copy of the Software is licensed except on these terms. Where this
+License distinguishes between capacities, "You" means an individual natural person; where an
+organizational entity uses the Software, "You" means that entity acting through its authorized
+users.
+
+1.3. **"Software"** means each version of the Tabrok desktop application (including the macOS
+application bundle, DMG installer, bundled backend binary and its component archives, Electron
+renderer and main processes, resource files, embedded assets, and documentation) made available
+by Licensor under these terms, including any portion or element thereof.
+
+1.4. **"Agent Orchestration Architecture"** means the proprietary structure, sequence,
+organization, thresholds, weighting parameters, state machines, and control flows embodied in
+the Software, including but not limited to: the autonomous browser-agent execution loop and
+task-decomposition heuristics; visual browser-grounding and state-extraction models; browser
+session lifecycle, stale-process reclamation, and profile isolation management; the real-time
+step-streaming and IPC bridge protocols; the standardized error classification taxonomy
+(`ERR-*` codes); the bring-your-own-key provider routing and Keychain-encrypted credential
+architecture; the local service authentication and sandboxing architecture; provider
+rate-limit pacing logic; the hardened local-file access guard; the prompt composition and
+interception pipeline; and any model routing, retry, or scheduling heuristics derived from the
+foregoing.
+
+1.5. **"Derivative Work"** means any work of authorship, modification, patch, fork, extension,
+translation, or port (including translating or porting the Software or the non-literal
+structure, sequence, and organization of the Agent Orchestration Architecture from Python,
+JavaScript, or TypeScript into C, C++, Rust, Swift, Objective-C, Kotlin, Dart, Go, or any other
+programming language or framework), or compilation that is based upon, derived from, or
+incorporates any copyrightable expression or structural element of the Software.
+
+1.6. **"Commercial Use"** means any use, reproduction, modification, deployment, or
+distribution of the Software or any Derivative Work that is intended for, directed toward, or
+results in commercial advantage, monetary compensation, cost avoidance, business operations, or
+organizational benefit, whether direct or indirect — except as expressly permitted under
+Section 3.2 during the Beta Period.
+
+1.7. **"Internal Business or Organizational Use"** means installing, deploying, running,
+evaluating in production, or distributing the Software or any Derivative Work within, by, at
+the direction of, or on behalf of any company, corporation, enterprise, law firm, consultancy,
+employer, government body, educational institution, or non-profit organization, including:
+(a) automated fleet deployment via device-management tooling; (b) installation by an IT
+administrator onto devices used by employees, contractors, or members; and (c) instructing,
+requiring, or assisting personnel to install or use the Software in connection with their
+employment or professional duties.
+
+1.8. **"Beta Period"** means the period during which Licensor designates the Software as a
+pre-release beta, test, or evaluation version, as indicated in the Software's release notes,
+Settings → Updates screen, or on https://lidarium.com.
+
+1.9. **"Competing Use"** means making the Software or any Derivative Work available to others —
+whether free of charge or for a fee, and whether as source code, compiled binaries, an
+application, a software development kit, a library, an embedded module, an API, or a
+managed/hosted service — that:
+   (a) substitutes for the Software or any product or service offered by Licensor;
+   (b) offers Competing Functionality, meaning a product or service that satisfies both of the
+following: (i) it is designed for, marketed for, or used for autonomous AI browser-agent
+automation, agentic web task execution, or browser-agent orchestration on behalf of end users;
+AND (ii) it implements, incorporates, or is derived from five (5) or more of the
+method-families described in Section 1.4 (Agent Orchestration Architecture), including but not
+limited to visual browser grounding, agent task decomposition, step-streaming orchestration,
+provider-key routing with encrypted credential storage, agent rate-limit pacing, or hardened
+local-file access guarding for agent tasks. For clarity, the five (5) method-family threshold is
+an evidentiary standard for establishing substantial similarity under this License, not a safe
+harbour permitting copying of fewer than five (5) methods; any unauthorized use, reproduction,
+or porting of even a single (1) method or heuristic of the Agent Orchestration Architecture
+constitutes a breach of this License. A party that has downloaded or received the Software
+within the twenty-four (24) months preceding the alleged Competing Use shall be presumed to
+have copied such method-families, and any clean-room or independent-creation defence shall be
+unavailable to such party; or
+   (c) is distributed through any public or private application marketplace or package
+repository without Licensor's prior written authorization.
+
+---
+
+## 2. CONDITIONAL LICENSE GRANT
+
+Subject to Your continuous compliance with the conditions and covenants of this License,
+Licensor hereby grants You a conditional, revocable, non-exclusive, non-transferable,
+non-sublicensable license, under Licensor's copyright rights in the Software, to install,
+execute, and use the Software **solely for a Permitted Purpose** as defined in Section 3.
+
+---
+
+## 3. PERMITTED PURPOSE
+
+A **"Permitted Purpose"** means only the following activities:
+
+3.1. **Personal Individual Use:** Downloading the Software from Licensor's authorized
+distribution channels and installing and using it on personal devices owned or controlled by
+You, for Your own lawful purposes, including personal productivity, research, and task
+automation.
+
+3.2. **Organizational Use During Beta Period:** During the Beta Period only, Internal Business
+or Organizational Use of the Software (as defined in Section 1.7) by an individual, team, or
+organization, subject to Licensor's Beta Terms. Upon expiry of the Beta Period or upon notice
+from Licensor, continued organizational use requires a separate written Commercial License
+Agreement. Personal individual use by employees on their own devices for their own purposes
+remains permitted under Section 3.1, provided such use was not directed, required, or
+reimbursed by their employer. **Beta validity window:** each beta build becomes non-functional
+ninety (90) days after its build date; the exact expiry date (the `beta_valid_until` value) is
+displayed in the app (Settings → System → About & Legal) and stamped into the build. Continued
+use after that date requires installing a current beta build, or obtaining a longer-validity
+Beta Business License from Licensor. This window is a freshness mechanism, not a transfer of
+rights: it grants no rights beyond Section 2 and withdraws none.
+
+3.3. **Evaluation and Non-Commercial Review:** Evaluating the Software's functionality for
+licensing decisions, and publishing accurate, good-faith reviews or non-commercial research
+analyses of the Software's observable behaviour, provided such publications do not distribute a
+Competing Use product and do not disclose Licensor's trade secrets.
+
+3.4. **Redistribution of Official Beta Builds:** During the Beta Period only, You may
+redistribute complete, verbatim, and unmodified copies of the official beta DMG installer
+("Tabrok-*.dmg") that You obtained from Licensor's authorized channels or from another Licensee
+who redistributed it in accordance with this Section 3.4, subject to all of the following
+conditions: (a) redistribution is free of charge — You may not sell, rent, bundle, or trade the
+Software for any consideration; (b) the copy must be complete and unmodified, including all
+copyright, license, attribution, and third-party notices, the in-app license acceptance dialog,
+and the Settings → About & Legal materials; (c) You must not re-host, mirror, or make the
+Software available on any website, package repository, marketplace, torrent, or file-sharing
+service in a manner that presents it as Your own distribution (personal, direct sharing — such
+as sending the DMG file to a colleague — is permitted); (d) every recipient is bound by this
+License and must accept it in the Software's first-run dialog before use; and (e) this
+redistribution right is revocable by Licensor at any time upon notice. Outside the Beta Period,
+redistribution requires a separate written Commercial License Agreement. For clarity: this
+Section 3.4 grants a right to redistribute the specified unmodified binary only; it does not
+grant any right to modify, extract, reverse engineer, or create Derivative Works (Section 4),
+nor does it cause the first-sale or distribution rights in any particular lawfully obtained copy
+to extend to reproduction of new copies.
+
+---
+
+## 4. SCOPE-OF-USE CONDITIONS & CONTRACTUAL COVENANTS
+
+Your license to use the Software is expressly conditioned upon Your compliance with the
+following restrictions, which operate both as limitations on the scope of the copyright license
+and as binding contractual covenants during Your use of the Software. Without a separate
+written **Commercial License Agreement** from Licensor (`legal@lidarium.com`), You shall not:
+
+4.1. **No Commercial Exploitation:** Sell, lease, rent, license, sublicense, monetize
+(including via advertisements, sponsorships, paid support, "freemium" tiers, or resale of
+bundles), or otherwise commercially exploit the Software, the DMG installer, or any Derivative
+Work.
+
+4.2. **No Unauthorized Redistribution or Mirror Distribution:** Except for the limited,
+revocable beta redistribution right in Section 3.4, redistribute, mirror, re-host, repackage,
+re-brand, or make the Software (in original or modified form) available on any website, package
+repository, BitTorrent or peer-to-peer channel, file-sharing service, application store, or
+internal software portal accessible beyond Your authorized users. Any copy that has been
+modified, stripped of notices, or repackaged carries **no license whatsoever** and is an
+unauthorized reproduction of the Software.
+
+4.3. **No Competing Use or Marketplace Distribution:** Engage in any Competing Use (as defined
+in Section 1.9), or publish, upload, or distribute the Software or any Derivative Work on any
+application store, package repository, or marketplace without Licensor's prior written
+authorization.
+
+4.4. **No SDK, Library, or OEM Embedding:** Extract, link, wrap, bundle, or embed the Software,
+its bundled backend binary, or the Agent Orchestration Architecture into any third-party
+application, automation suite, agent framework, or hardware device.
+
+4.5. **Contractual Covenant Against Reverse Engineering, Extraction, Non-Literal Porting, and
+Circumvention:** As an express contractual condition of using the Software, You covenant and
+agree that You will not, directly or through any third party: (a) reverse-engineer, decompile,
+disassemble, decrypt, or otherwise attempt to derive the source code, object code, or underlying
+structure of the Software or any portion thereof (including the bundled backend binary), except
+to the minimum extent that applicable law expressly prohibits this restriction, and then only
+after giving Licensor prior written notice and a reasonable opportunity to provide the requested
+interoperability information; (b) extract, copy, or reproduce the non-literal structure,
+sequence, and organization (SSO) of the Agent Orchestration Architecture; (c) translate, port,
+or convert the Agent Orchestration Architecture (including any of its heuristics, pacing
+parameters, error taxonomy, or guard logic) into any other programming language, framework, or
+platform; (d) circumvent, disable, or bypass any technical protection measure in the Software,
+including but not limited to the Keychain-encrypted credential store, the local service
+authentication token, the hardened local-file access guard, or any license or integrity
+mechanism, or develop, distribute, or use any tool designed to do so; or (e) use access to the
+Software to create, develop, or assist in the creation of any product or service that
+implements, incorporates, or is derived from the Agent Orchestration Architecture. For the
+avoidation of doubt, any Licensee who has downloaded or used the Software is bound by this
+Section 4.5, and the availability of interoperability or fair-dealing exceptions under
+Section 52 of the Copyright Act, 1957 shall not be available as a defence to a breach of this
+Section 4.5 by such Licensee. Breach of this Section 4.5 constitutes both a material breach of
+contract and, to the extent copyrightable expression or structural elements are reproduced or
+adapted, copyright infringement.
+
+4.6. **No AI / Machine Learning Model Training:** Use the Software, its outputs, its
+documentation, or the Agent Orchestration Architecture to train, fine-tune, update weights of,
+or distill any third-party artificial intelligence model or large language model (LLM), nor
+sell datasets derived from the Software. *(Note: This restriction binds Licensees only and does
+not restrict Licensor's own AI training or data processing operations.)*
+
+4.7. **Preservation of Notices:** Remove, alter, obfuscate, or obscure any copyright,
+trademark, attribution, or license notices in the Software, or bypass any technical integrity
+mechanisms.
+
+4.8. **No Unlawful Automated Access:** Use the Software to violate, induce the violation of, or
+assist others in violating the terms of service of any website, platform, or service, or any
+applicable law, including laws governing automated access, data collection, advertising, and
+privacy. You are solely responsible for supervising the autonomous agent and for every action
+it takes on third-party services on Your behalf.
+
+4.9. **No Agent-as-a-Service:** Use the Software to provide managed, hosted, or
+service-bureau execution of autonomous agent tasks to third parties as a commercial offering
+without a Commercial License Agreement.
+
+---
+
+## 5. PATENTS & DEFENSIVE TERMINATION
+
+5.1. **Limited Patent License:** To the extent Your use of the Software strictly for a
+Permitted Purpose would necessarily infringe any patent claims held or licensable by Licensor
+at the time the Software is made available, Licensor grants You a limited, revocable,
+non-exclusive, non-transferable, non-sublicensable license under such patent claims solely to
+exercise the Permitted Purpose. No patent license is granted for any Commercial Use,
+Internal Business or Organizational Use beyond Section 3.2, or Competing Use.
+
+5.2. **No Reverse Patenting:** As a condition of the grant in Section 2, You agree not to file,
+apply for, or prosecute any patent application anywhere in the world that claims, incorporates,
+or is derived from the Software, any Derivative Work, or the Agent Orchestration Architecture.
+To the extent any such patent is nevertheless obtained, You hereby grant Licensor an immediate,
+irrevocable, perpetual, worldwide, royalty-free, transferable, and unrestrictedly
+sublicensable license under all claims of such patent.
+
+5.3. **Patent Retaliation Termination:** If You (or Your employer or affiliate) institute
+patent, copyright, or other intellectual property litigation or administrative proceedings
+against Licensor or any user of the Software (including a cross-claim or counterclaim in a
+lawsuit) alleging that the Software infringes any patent or intellectual property right, all
+licenses granted to You under this License shall terminate automatically as of the date such
+proceeding is filed.
+
+---
+
+## 6. TRADE SECRETS & CONFIDENTIAL INFORMATION
+
+6.1. **Trade Secret Acknowledgement.** The Agent Orchestration Architecture (as defined in
+Section 1.4), including but not limited to the agent execution loop, task-decomposition
+heuristics, visual grounding models, session lifecycle management, step-streaming protocol,
+error taxonomy, credential routing, authentication and sandboxing architecture, rate-limit
+pacing logic, and file-access guard, constitute valuable trade secrets of Licensor. By using
+the Software, You acknowledge that such trade secrets derive independent economic value from
+not being generally known to the public or to other persons who can obtain economic value from
+their disclosure or use, and that Licensor has taken reasonable measures to keep such
+information secret, including but not limited to distribution in compiled form under this
+License that expressly restricts reverse engineering, extraction, and competing use.
+
+6.2. **No Trade Secret Rights Granted.** Nothing in this License grants You any right, title,
+or interest in or to the trade secrets of Licensor. Your right to use the Software is a limited
+privilege conditioned upon Your continued compliance with this License, and does not constitute
+a disclosure or abandonment of Licensor's trade secret rights. You shall not, directly or
+through any third party: (a) misappropriate, disclose, or use Licensor's trade secrets except
+as expressly permitted under this License; (b) employ, engage, or collaborate with any current
+or former employee, contractor, or agent of Licensor with access to such trade secrets for the
+purpose of developing a Competing Use; or (c) solicit, induce, or encourage any current
+employee, contractor, or agent of Licensor to disclose or misappropriate such trade secrets.
+
+6.3. **Survival.** Licensor's trade secret rights shall survive any termination or expiration
+of this License and shall be enforceable under applicable trade secret law, including the
+Indian Contract Act, 1872 (Section 27), the common law of confidence, and any other applicable
+statutory or equitable remedies, notwithstanding any termination of Your rights under this
+License.
+
+6.4. **Third-Party Obligations.** If You are an employer, principal, or engager of any current
+or former employee, contractor, or agent of Licensor, You are expressly prohibited from
+directing, encouraging, or permitting such person to use or disclose Licensor's trade secrets
+in connection with Your work. Breach of this Section 6.4 shall constitute tortious interference
+with Licensor's trade secret rights and shall entitle Licensor to seek injunctive relief and
+damages without proof of actual loss.
+
+---
+
+## 7. TRADEMARKS & BRANDING
+
+This License does not grant You any right, title, or interest in or to the trade names,
+trademarks, service marks, logos, domain names, or package identifiers of Licensor, including
+**"Tabrok"**, **"Lidarium"**, **"TERALIDARIUM WORKS"**, and associated marks and logos. See
+`TRADEMARKS.md` for full trademark policy.
+
+---
+
+## 8. CONTRIBUTIONS
+
+The Software is distributed in compiled form. Contributions, modifications, or derivative
+packages may be supplied to Licensor only under a separate written agreement. Any feedback,
+suggestions, or ideas You voluntarily provide regarding the Software may be used by Licensor
+without restriction, obligation, or compensation, and You hereby assign to Licensor all right,
+title, and interest in any copyrightable material therein.
+
+---
+
+## 9. PERMANENT TERM, CURE PERIOD & TERMINATION
+
+9.1. **Permanent Term:** The terms and restrictions of this License apply for the full duration
+of applicable copyright protection. This License does not convert or transition into an
+open-source license after any period of time.
+
+9.2. **Termination & 30-Day Cure Period for Remediable Breaches:**
+   (a) **Remediable Breaches:** If You breach a condition of this License in good faith and in a
+non-material manner (such as an inadvertent failure to include required attribution notices
+under Section 3.3 or Section 4.7), Your rights under this License shall terminate if You fail to
+cure such breach within **thirty (30) days** after receiving written notice of the breach from
+Licensor (or after otherwise becoming aware of the breach). If cured within such 30-day period,
+Your license shall continue in effect.
+   (b) **Immediate Termination for Material Breach:** If You engage in any redistribution
+(Section 4.2), Competing Use or marketplace distribution (Section 4.3), SDK/OEM embedding
+(Section 4.4), reverse engineering or extraction (Section 4.5), AI training violation
+(Section 4.6), notice removal (Section 4.7), or Patent Retaliation (Section 5.3), such breach
+is non-remediable and Your rights under this License shall **terminate immediately and
+automatically** without notice or cure period.
+   (c) **Effect of Termination:** Upon termination, You must immediately cease all use of the
+Software and all Derivative Works, and delete all copies in Your possession or control.
+Sections 1, 4.5, 5.2, 6, 7, 8, 9.3, 10, 11, and 12 shall survive termination.
+
+9.3. **Equitable Relief & Remedies:** You acknowledge that a breach of Section 4 may cause
+irreparable harm to Licensor for which monetary damages alone would be an inadequate remedy.
+Accordingly, Licensor shall be entitled to seek interim, preliminary, and permanent injunctive
+relief, specific performance, accounts of profits, and statutory damages in accordance with
+applicable law.
+
+---
+
+## 10. DISCLAIMER OF WARRANTIES
+
+**THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OR CONDITION OF ANY
+KIND, EXPRESS, IMPLIED, OR STATUTORY, INCLUDING WITHOUT LIMITATION ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, QUIET ENJOYMENT, ACCURACY,
+RELIABILITY, OR NON-INFRINGEMENT.**
+
+**WITHOUT LIMITING THE FOREGOING, LICENSOR MAKES NO WARRANTY OR REPRESENTATION THAT THE
+SOFTWARE WILL COMPLETE ANY OR ALL AUTONOMOUS TASKS, THAT THE AUTONOMOUS AGENT WILL ACT
+CORRECTLY, OR THAT THE SOFTWARE WILL BE FREE OF FAILURES, INTERRUPTIONS, LOST WORK, OR
+VULNERABILITIES. THE AUTONOMOUS AGENT TAKES ACTIONS ON THIRD-PARTY WEBSITES ON YOUR
+INSTRUCTION; YOU ASSUME ALL RISK ASSOCIATED WITH THOSE ACTIONS, INCLUDING ACCOUNT ACTIONS,
+SUBMISSIONS, PURCHASES, AND COMPLIANCE WITH THIRD-PARTY TERMS OF SERVICE.**
+
+---
+
+## 11. LIMITATION OF LIABILITY
+
+**TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL LICENSOR, ITS
+PROPRIETOR, AUTHORS, OR CONTRIBUTORS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, PUNITIVE, OR CONSEQUENTIAL DAMAGES (INCLUDING
+WITHOUT LIMITATION, LOSS OF DATA, LOSS OF API KEYS OR CREDENTIALS, ACTIONS TAKEN BY THE
+AUTONOMOUS AGENT, ACCOUNT SUSPENSIONS, LOSS OF PROFITS, BUSINESS INTERRUPTION, OR PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, TORT (INCLUDING NEGLIGENCE), OR OTHERWISE, ARISING IN ANY WAY OUT
+OF THE USE OF OR INABILITY TO USE THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.**
+
+---
+
+## 12. GOVERNING LAW, ARBITRATION & VENUE
+
+12.1. **Governing Law:** This License and any dispute, claim, or controversy arising out of or
+relating to this License, its breach, termination, enforcement, or the Software (whether in
+contract, tort, copyright, or statute) shall be governed by and construed in accordance with
+the **laws of the Republic of India**, including the Indian Copyright Act, 1957 and the Indian
+Contract Act, 1872, without regard to conflict-of-law principles.
+
+12.2. **Dispute Resolution & Arbitration:** Any dispute, controversy, or claim arising out of or
+relating to this License, including any question regarding its existence, validity, or
+termination, shall be referred to and finally resolved by binding arbitration in accordance
+with the **Arbitration and Conciliation Act, 1996** (as amended) and the rules of the
+**Bengaluru International Mediation and Arbitration Centre (BIMACC)** or such other arbitral
+institution as the parties may mutually agree. The arbitral tribunal shall consist of a sole
+arbitrator appointed by mutual agreement of the parties within thirty (30) days of the
+arbitration notice; failing such agreement, the arbitrator shall be appointed by the said
+institution in accordance with its rules. The **seat and venue of arbitration shall be
+Bengaluru (Bangalore), Karnataka, India**, and the proceedings shall be conducted in the
+English language. The arbitral award shall be final and binding upon the parties and
+enforceable in any court of competent jurisdiction. Costs of the arbitration, including the
+arbitrator's fees and institutional costs, shall follow the event, meaning that the
+unsuccessful party shall bear the costs of the successful party, unless the arbitral tribunal
+determines otherwise in its award.
+
+12.3. **Exclusive Court Jurisdiction & Interim Relief:** Subject to Section 12.2, the competent
+commercial and civil courts located in **Bengaluru (Bangalore), Karnataka, India** shall have
+**exclusive jurisdiction** over all disputes, suits, and proceedings arising out of or relating
+to this License, including applications for interim or injunctive relief under Section 9 of the
+Arbitration and Conciliation Act, 1996 or under the Indian Copyright Act, 1957.
+
+12.4. **Severability & Blue-Pencil Reformation:** If any provision of this License is held to
+be invalid, illegal, or unenforceable under applicable law, such provision shall be modified
+("blue-penciled") to the minimum extent necessary to render it valid and enforceable while
+preserving its commercial and protective intent, and the remaining provisions shall continue in
+full force and effect.
+
+12.5. **No Waiver:** No failure or delay by Licensor in exercising any right, power, or remedy
+under this License shall operate as a waiver thereof.
+
+12.6. **Commercial Licensing:** For commercial licensing beyond the Beta Period, OEM/SDK
+integration, enterprise or fleet deployment, or custom licensing inquiries, contact:
+**legal@lidarium.com**
+
+12.7. **Foreign Infringement & Platform Takedown Enforcement:** Licensor reserves the right,
+but assumes no obligation, to enforce its rights against foreign or extraterritorial
+infringement through mechanisms other than arbitration under Section 12.2, including but not
+limited to: (a) submitting takedown notices under the Digital Millennium Copyright Act (DMCA),
+17 U.S.C. § 512, or equivalent legislation in other jurisdictions, to application marketplaces,
+package repositories, and file-hosting services hosting unauthorized copies of the Software;
+(b) submitting trademark infringement complaints under the Tabrok marks (as defined in
+Section 7 and TRADEMARKS.md) to such platforms; (c) issuing notices under Section 79 of the
+Information Technology Act, 2000 (India) to intermediaries hosting infringing copies; and
+(d) pursuing injunctive or other equitable relief in any court of competent jurisdiction.
+Nothing in this Section 12.7 shall be construed as a waiver of Licensor's rights under
+Section 12.2 or any other provision of this License.
+
+---
+
+## ACCEPTANCE
+
+By installing, copying, clicking "I Agree" in the Software's first-run license dialog, or
+otherwise using the Software, You acknowledge that You have read, understood, and agree to be
+bound by the terms of this Tabrok Proprietary License, Version 1.0.

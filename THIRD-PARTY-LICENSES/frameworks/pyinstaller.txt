@@ -1,0 +1,27 @@
+PyInstaller 6.22.3
+License: GPL-2.0-or-later with special exception
+========================================================================
+
+PyInstaller is distributed under the GNU General Public License version 2 or later (GPL-2.0-or-later)
+WITH A SPECIAL EXCEPTION which allows you to use PyInstaller to build and distribute non-free
+(including commercial) programs, and to bundle GPL-incompatible dependencies with them, provided
+the resulting program does not depend on PyInstaller at runtime:
+
+    Copyright (C) 2007-2026 by the PyInstaller developing team (see the AUTHORS file in the
+    PyInstaller distribution).
+
+    This program is free software; you can redistribute it and/or modify it under the terms of
+    the GNU General Public License as published by the Free Software Foundation; either version
+    2 of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+    without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+    See the GNU General Public License for more details.
+
+    As an exception, if you use this program to compile application source code into executables
+    or object code, and the application does not itself depend on PyInstaller, you may distribute
+    the resulting executables and object code under terms of your choice, including commercial,
+    closed-source terms, provided the terms also permit the distribution of this program's own
+    runtime library, which forms part of PyInstaller.
+
+    Full GPL-2.0 text: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
