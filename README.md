@@ -10,11 +10,11 @@ Describe any web task in plain language, and a real browser on your machine carr
 
 | Release | Version | macOS Compatibility | Package | Release Notes |
 | :--- | :--- | :--- | :--- | :--- |
-| **Latest Beta** | `26.293.1928-beta` | macOS 12+ (Intel x86_64 — runs on Apple Silicon via Rosetta 2) | [**Download Tabrok-26.293.1928-beta.dmg** (202 MB)](https://github.com/lidarium/tabrokreleases/releases/download/v26.293.1928-beta/Tabrok-26.293.1928-beta.dmg) | [v26.293.1928-beta](https://github.com/lidarium/tabrokreleases/releases/tag/v26.293.1928-beta) |
+| **Latest Beta** | `26.299.719-beta` | macOS 12+ (Intel x86_64 — runs on Apple Silicon via Rosetta 2) | [**Download Tabrok-26.299.719-beta.dmg** (202 MB)](https://github.com/lidarium/tabrokreleases/releases/download/v26.299.719-beta/Tabrok-26.299.719-beta.dmg) | [v26.299.719-beta](https://github.com/lidarium/tabrokreleases/releases/tag/v26.299.719-beta) |
 
 **SHA-256 Checksum:**
 ```text
-4c3325093f2c3e4262bffd0ca3c77fb6d97f2e482dde69388aaf615c5f3ea84e  Tabrok-26.293.1928-beta.dmg
+ed4f1b55b022c190e706d2f20637f8e8d92297a68e00055f8e131c447dce9d4c  Tabrok-26.299.719-beta.dmg
 ```
 
 You can view all past and future releases on the [**GitHub Releases Page**](https://github.com/lidarium/tabrokreleases/releases).

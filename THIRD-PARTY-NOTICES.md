@@ -221,9 +221,12 @@ runtime dependencies include `undici` (MIT), `@sentry/core` and the OpenTelemetr
 
 ## 5. Copied-In UI Components
 
-- **shadcn/ui** — MIT License — Copyright (c) 2023 shadcn. The components in
-  `frontend/src/components/ui/` are MIT-licensed copies incorporated per the shadcn/ui distribution
-  model; they are the only third-party source files present in Tabrok's own codebase.
+- **shadcn/ui** — MIT License — Copyright (c) 2023 shadcn. The derived components in
+  `frontend/src/components/ui/` (`dialog.tsx`, `dropdown-menu.tsx`, `label.tsx`, `scroll-area.tsx`,
+  `separator.tsx`, `slider.tsx`, `textarea.tsx`, `tooltip.tsx`) are MIT-licensed copies incorporated
+  per the shadcn/ui distribution model and carry the upstream MIT header. Other UI files
+  (`button.tsx`, `card.tsx`, `input.tsx`, `select.tsx`, `toast.tsx`) are hand-written proprietary
+  implementations and are not derived from shadcn/ui.
 
 ## 6. Fonts & Icons
 
